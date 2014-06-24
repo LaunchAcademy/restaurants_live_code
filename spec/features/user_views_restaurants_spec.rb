@@ -4,15 +4,9 @@ feature 'user views restaurants' do
 
   scenario 'view list of available restaurants' do
 
-    Restaurant.create!(name: 'Pho Hoa',
-      address: '20 Beach Street', city: 'Boston',
-      state: 'MA', zip_code: '02111')
-    Restaurant.create!(name: 'Pho Pasteur',
-      address: '20 Beach Street', city: 'Boston',
-      state: 'MA', zip_code: '02111')
-    Restaurant.create!(name: 'Dumpling King',
-      address: '20 Beach Street', city: 'Boston',
-      state: 'MA', zip_code: '02111')
+    FactoryGirl.create(:restaurant, name: 'Pho Hoa')
+    FactoryGirl.create(:restaurant, name: 'Pho Pasteur')
+    FactoryGirl.create(:restaurant, name: 'Dumpling King')
 
     visit restaurants_path
 
