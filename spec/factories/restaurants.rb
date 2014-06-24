@@ -1,6 +1,6 @@
 FactoryGirl.define do
   factory :restaurant do
-    name 'Generic Restaurant'
+    sequence(:name) { |n| "Generic Restaurant #{n}" }
     category 'Italian'
     address '123 Main St'
     city 'Boston'
